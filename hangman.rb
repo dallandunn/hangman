@@ -11,3 +11,12 @@ def secret_word()
     secret_word = dictionary.sample
     secret_word
 end
+
+def get_letter()
+    letter = ""
+    while not letter.match?(/[[:alpha:]]/) && letter.length == 1
+        print "Guess a letter: "
+        letter = gets.chomp
+    end
+    letter.downcase
+end
